@@ -1,0 +1,33 @@
+nav {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  height: 120px;
+  position: fixed; /* fixed navbar*/
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500; /* nav to be displayed in front of the header*/
+  padding: 1.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#logo {
+  font-family: 'Bungee', sans-serif;
+}
+
+button {
+  background-color: transparent;
+  color: #FFFFFF;
+  border-style: none;
+  cursor: pointer;
+  outline: none;
+  animation-name: bounce;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+#compose-new {
+  display: flex;
+  flex-direction: column;
+}

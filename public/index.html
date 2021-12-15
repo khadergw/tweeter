@@ -7,23 +7,85 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
+     <!-- Specified Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet"> 
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+    <!-- Navigation Bar CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <!-- New Tweet Form CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <!-- All Tweets CSS -->
+    <link rel="stylesheet" href="/styles/allTweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+
+    <!-- Character Counter JS -->
+    <script src="/scripts/composer-char-counter.js"></script>
+
+    <!-- Timeago JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span id="logo">tweeter</span>
+      <div id="compose-new">
+        <span><b>Write</b> a new tweet</span>
+        <button type="button">
+          <i class="fa-solid fa-angles-down"></i>    
+        </button>
+      </div>
     </nav>
 
+    <header>
+      <div>
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <br>
+      <div>
+          <h2>Ghadeer Khader</h2>
+      </div>
+  </header>
+  
+
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet" >
+        <div class="error"></div>
+        <h2>Compose Tweet</h2>
+         <form id ="new-post-tweet" action="/tweets" method="POST">
+           <!--  <label for="tweet-text">What are you humming about?</label>  -->
+          <textarea name="text" placeholder="What are you humming about?" ></textarea>
+            <input type="submit" value="Tweet">
+            <span class="counter">140</span>
+        </form>
+      </section>
+      
+      <section class="allTheTweets"></section>
+      
+    </main>
   </body>
 </html>
+
+
+<!-- style = "background-color:  #e9decb; margin:1%;width:70%;align-self: center; border-radius:10px;" -->
